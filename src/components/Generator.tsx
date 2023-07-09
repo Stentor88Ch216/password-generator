@@ -2,7 +2,7 @@ import { useState } from "react";
 import StrengthGauge from "./StrengthGauge";
 import { ArrowIcon } from "./Icons";
 import "./Generator.css";
-import { generatePassword, passwordStrength } from "../PasswordFunctions";
+import { generatePassword, passwordStrength } from "../utils";
 
 
 interface GeneratorProps {

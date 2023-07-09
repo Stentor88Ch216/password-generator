@@ -44,6 +44,15 @@ export function passwordStrength(password: string): number {
     if (password.length >= 12) lengthScore = 0.5;
     if (password.length >= 16) lengthScore = 1;
 
-    // Average of the two scores, scaled to a range of 0 to 3
-    return Math.round((typeScore + lengthScore) / 2 * 3);
+    // Average of the two scores, scaled to a range of 1 to 4
+    return Math.round((typeScore + lengthScore) / 2 * 3) + 1;
+}
+
+
+export async function copyToClipboard(text: string) {
+    try {
+        await navigator.clipboard.writeText(text);
+    } catch (err) {
+        console.error('Failed to copy text: ', err);
+    }
 }

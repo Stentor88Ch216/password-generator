@@ -4,12 +4,14 @@ function strengthLabel(strength: number) {
   console.log(strength);
   switch (strength) {
     case 0:
-      return "TOO WEAK!";
+      return "";
     case 1:
-      return "WEAK";
+      return "TOO WEAK!";
     case 2:
-      return "MEDIUM";
+      return "WEAK";
     case 3:
+      return "MEDIUM";
+    case 4:
       return "STRONG";
     default:
       return "UNKNOWN";
@@ -19,12 +21,14 @@ function strengthLabel(strength: number) {
 function gaugeColors(strength: number): string[] {
   switch (strength) {
     case 0:
-      return ["red","blank","blank","blank"];
+      return ["blank","blank","blank","blank"];
     case 1:
-      return ["orange","orange","blank","blank"];
+      return ["red","blank","blank","blank"];
     case 2:
-      return ["yellow","yellow","yellow","blank"];
+      return ["orange","orange","blank","blank"];
     case 3:
+      return ["yellow","yellow","yellow","blank"];
+    case 4:
       return ["green","green","green","green"];
     default:
       return ["blank","blank","blank","blank"];
@@ -51,7 +55,7 @@ export default function StrengthGauge(props: StrengthGaugeProps) {
         <div className={"gauge-bar "+colors[2]}></div>
         <div className={"gauge-bar "+colors[3]}></div>
       </div>
-      
+
     </div>
   );
 }
