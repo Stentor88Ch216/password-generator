@@ -70,9 +70,15 @@ input[type="checkbox"] {
 .generate-button:hover {
     background-color: transparent;
     color: #A4FFAF; /*Text color*/
-    fill: #A4FFAF; /*Icon color*/
     outline: 2px solid #A4FFAF;
     outline-offset: -2px;
+}
+
+.generate-button:disabled {
+    background-color: #18171F;
+    color: #817D92;
+    cursor: not-allowed;
+    outline: none;
 }
 
 

@@ -12,7 +12,7 @@ export default function App() {
       <div className="App">
         <h1>Password Generator</h1>
         <Password password={password}/>
-        <Generator setPassword={setPassword}/>
+        <Generator password={password} setPassword={setPassword}/>
       </div>
     </div>
   );

@@ -19,6 +19,10 @@
 .gauge-bar {
     width: 10px;
     height: 30px;
+    background-color: #E6E5EA;
+}
+
+.gauge-bar.blank {
     background-color: transparent;
     outline: 2px solid #E6E5EA;
     outline-offset: -2px;
@@ -26,20 +30,16 @@
 
 .gauge-bar.green {
     background-color: #A4FFAF;
-    outline: 0px;
 }
 
 .gauge-bar.yellow {
     background-color: #F8CD65;
-    outline: 0px;
 }
 
 .gauge-bar.orange {
     background-color: #FB7C58;
-    outline: 0px;
 }
 
 .gauge-bar.red {
     background-color: #F64A4A;
-    outline: 0px;
 }

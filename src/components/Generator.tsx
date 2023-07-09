@@ -2,17 +2,18 @@ import { useState } from "react";
 import StrengthGauge from "./StrengthGauge";
 import { ArrowIcon } from "./Icons";
 import "./Generator.css";
-import { generatePassword } from "../PasswordFunctions";
+import { generatePassword, passwordStrength } from "../PasswordFunctions";
 
 
 interface GeneratorProps {
+  password: string;
   setPassword: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export default function Generator(props: GeneratorProps) {
 
   const defaultParams = {
-    length: 8,
+    length: 16,
     includeUppercase: true,
     includeLowercase: true,
     includeNumbers: true,
@@ -98,7 +99,7 @@ export default function Generator(props: GeneratorProps) {
 
       </div>
       
-      <StrengthGauge/>
+      <StrengthGauge strength={passwordStrength(props.password)}/>
 
       <button
         type="button"
@@ -111,6 +112,7 @@ export default function Generator(props: GeneratorProps) {
             params.includeNumbers,
             params.includeSymbols
         ))}
+        disabled={params.includeUppercase || params.includeLowercase || params.includeNumbers || params.includeSymbols ? false : true}
       >
         <div className="generate-button-content">
           <p>GENERATE</p>

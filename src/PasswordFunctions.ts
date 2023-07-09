@@ -29,11 +29,21 @@ export function generatePassword(length: number, includeUppercase: boolean, incl
 
 
 export function passwordStrength(password: string): number {
-    let score = 0;
-    if (password.length >= 12) score++;
-    if (/[a-zA-Z]/.test(password)) score++; // any letter
-    if (/[0-9]/.test(password)) score++; // number
-    if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) score++; // special character
+    if (!password) return 0;
 
-    return score;
+    // Score for variety of character types
+    const hasLowerCase = /[a-z]/.test(password);
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    const hasSymbol = /\W|_/.test(password);
+    const typeCount = (hasLowerCase ? 1 : 0) + (hasUpperCase ? 1 : 0) + (hasNumber ? 1 : 0) + (hasSymbol ? 1 : 0);
+    const typeScore = typeCount / 4; // This will range from 0 to 1
+
+    // Score for length of password
+    let lengthScore = 0;
+    if (password.length >= 12) lengthScore = 0.5;
+    if (password.length >= 16) lengthScore = 1;
+
+    // Average of the two scores, scaled to a range of 0 to 3
+    return Math.round((typeScore + lengthScore) / 2 * 3);
 }
