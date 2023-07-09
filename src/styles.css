@@ -1,4 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .App {
-  font-family: sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   text-align: center;
+  color: #E6E5EA;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 600px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+h1 {
+  color: #817D92;
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
 }

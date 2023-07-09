@@ -1,0 +1,22 @@
+.strength-gauge-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #18171F;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gauge-bars-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gauge-bar {
+    width: 10px;
+    height: 30px;
+    background-color: greenyellow;
+    border: 2px;
+}
