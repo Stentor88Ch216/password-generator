@@ -27,9 +27,7 @@ export default function Password(props: PasswordProps) {
             </p>
 
             <div className="copy-button-container">
-
                 <p className="copied-label">{clipboardMessage}</p>
-
                 <button
                     className="copy-button"
                     onClick={() => copyToClipboard(props.password, setClipboardMessage)}
