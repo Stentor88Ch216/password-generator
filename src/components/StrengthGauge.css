@@ -1,16 +1,16 @@
 .strength-gauge-container {
-    color: #817D92;
+    color: var(--grey);
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: #18171F;
+    background-color: var(--very-dark-grey);
     padding: 20px;
     box-sizing: border-box;
 }
 
 .gauge-bars-container {
-    color: #E6E5EA;
+    color: var(--almost-white);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -19,27 +19,27 @@
 .gauge-bar {
     width: 10px;
     height: 30px;
-    background-color: #E6E5EA;
+    background-color: var(--almost-white);
 }
 
 .gauge-bar.blank {
     background-color: transparent;
-    outline: 2px solid #E6E5EA;
+    outline: 2px solid var(--almost-white);
     outline-offset: -2px;
 }
 
 .gauge-bar.green {
-    background-color: #A4FFAF;
+    background-color: var(--neon-green);
 }
 
 .gauge-bar.yellow {
-    background-color: #F8CD65;
+    background-color: var(--yellow);
 }
 
 .gauge-bar.orange {
-    background-color: #FB7C58;
+    background-color: var(--orange);
 }
 
 .gauge-bar.red {
-    background-color: #F64A4A;
+    background-color: var(--red);
 }

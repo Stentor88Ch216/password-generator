@@ -49,10 +49,17 @@ export function passwordStrength(password: string): number {
 }
 
 
-export async function copyToClipboard(text: string) {
-    try {
-        await navigator.clipboard.writeText(text);
-    } catch (err) {
-        console.error('Failed to copy text: ', err);
+export async function copyToClipboard(text: string, callback: (message: string) => void) {
+    
+    if (text.length !== 0) {
+        try {
+            await navigator.clipboard.writeText(text);
+            callback('COPIED');
+        } catch (err) {
+            console.error('Failed to copy text: ', err);
+            callback('FAILED TO COPY');
+        }
+    } else {
+        callback('NOTHING TO COPY');
     }
 }
