@@ -1,0 +1,107 @@
+.generator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--big-padding);
+    gap: var(--big-padding);
+    justify-content: space-between;
+    background-color: var(--dark-grey);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+@media (max-width: 540px) {
+    .generator-container {
+      padding: var(--small-padding);
+      gap: var(--small-padding);
+    }
+  }
+
+.slider-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.slider {
+    width: 100%;
+}
+
+.checkboxes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 100%;
+}
+
+.length-number {
+    font-size: 32px;
+    color: var(--neon-green);
+}
+
+.slider {
+    cursor: pointer;
+    accent-color: var(--neon-green);
+}
+
+.checkboxes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: var(--small-padding);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: var(--small-padding);
+}
+
+label {
+    text-align: left;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    background-color: var(--neon-green);
+
+}
+
+.generate-button {
+    color: #24232C;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--neon-green);
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.generate-button:hover {
+    background-color: transparent;
+    color: var(--neon-green); /*Text color*/
+    outline: 2px solid var(--neon-green);
+    outline-offset: -2px;
+}
+
+.generate-button:disabled {
+    background-color: var(--very-dark-grey);
+    color: var(--grey);  /*Text color*/
+    cursor: not-allowed;
+    outline: none;
+}
+
+
+.generate-button-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
