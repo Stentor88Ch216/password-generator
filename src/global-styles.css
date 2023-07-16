@@ -15,6 +15,9 @@ body {
   --orange: #FB7C58;
   --red: #F64A4A;
 
+  --big-padding: 20px;
+  --small-padding: 15px;
+
   background-color: black;
   accent-color: var(--neon-green);
 
@@ -34,13 +37,19 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: var(--big-padding);
 
-
-  gap: 20px;
   box-sizing: border-box;
-  padding: 20px;
+  padding: var(--big-padding);
   width: 100vw;
   max-width: 540px;
+}
+
+@media (max-width: 540px) {
+  .App {
+    padding: var(--small-padding);
+    gap: var(--small-padding);
+  }
 }
 
 h1 {

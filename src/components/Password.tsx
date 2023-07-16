@@ -1,4 +1,4 @@
-import "./Password.css";
+import "./password.css";
 import { useEffect, useState } from "react";
 import { CopyIcon } from "./Icons";
 import { copyToClipboard } from "../utils";
@@ -10,8 +10,11 @@ interface PasswordProps {
 
 export default function Password(props: PasswordProps) {
 
+    // State to display a message when the password is copied to the clipboard
+    // Can be "COPIED" or "FAILED TO COPY"
     const [clipboardMessage, setClipboardMessage] = useState("");
 
+    // Clear the clipboard message when password changes
     useEffect(() => {
         setClipboardMessage("");
     }, [props.password]);
@@ -30,6 +33,7 @@ export default function Password(props: PasswordProps) {
                 <button
                     className="copy-button"
                     onClick={() => copyToClipboard(props.password, setClipboardMessage)}
+                    disabled={!props.password}
                 >
                     <CopyIcon/>
                 </button>

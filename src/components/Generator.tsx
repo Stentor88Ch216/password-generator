@@ -1,7 +1,7 @@
 import { useState } from "react";
 import StrengthGauge from "./StrengthGauge";
 import { ArrowIcon } from "./Icons";
-import "./Generator.css";
+import "./generator.css";
 import { generatePassword, passwordStrength } from "../utils";
 
 
@@ -33,7 +33,6 @@ export default function Generator(props: GeneratorProps) {
   return (
     <div className="generator-container">
 
-
       <div className="slider-label">
         <p>Character length</p>
         <p className="length-number">{params.length}</p>
@@ -47,9 +46,7 @@ export default function Generator(props: GeneratorProps) {
         max="64"
         value={params.length}
         onChange={handleSliderChange}
-        />
-
-
+      />
       
       <div className="checkboxes-container">
 

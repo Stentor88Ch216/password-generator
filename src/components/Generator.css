@@ -2,13 +2,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    padding: var(--big-padding);
+    gap: var(--big-padding);
     justify-content: space-between;
     background-color: var(--dark-grey);
     box-sizing: border-box;
-    padding: 20px;
     width: 100%;
 }
+
+@media (max-width: 540px) {
+    .generator-container {
+      padding: var(--small-padding);
+      gap: var(--small-padding);
+    }
+  }
 
 .slider-label {
     display: flex;
@@ -37,18 +44,21 @@
     cursor: pointer;
     accent-color: var(--neon-green);
 }
+
 .checkboxes-container {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    gap: 20px;
+    gap: var(--small-padding);
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .checkbox-label {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: var(--small-padding);
 }
 
 label {

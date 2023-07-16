@@ -1,4 +1,4 @@
-import "./StrengthGauge.css";
+import "./strength-gauge.css";
 
 function strengthLabel(strength: number) {
   console.log(strength);
